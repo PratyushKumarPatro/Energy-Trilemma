@@ -1,4 +1,5 @@
 # Energy-Trilemma
+
 import numpy as np 
 import pandas as pd 
 from sklearn.linear_model import LinearRegression
@@ -60,6 +61,7 @@ target_categorical = []
 target_continuous = imputed_df.loc[:, 'm2_q69_elec_hrs']
 
 # Use len() to get the length of the series
+
 for i in range(len(target_continuous)):
     current_value = target_continuous.iloc[i]  # Retrieve the actual value at the current index
     if current_value == 0:
