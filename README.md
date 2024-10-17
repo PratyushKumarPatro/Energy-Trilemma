@@ -160,7 +160,7 @@ plt.show()
 
  # ANN Classification
 
-pip install tensorflow
+!pip install tensorflow
 
 from sklearn.neural_network import MLPClassifier
 from sklearn.feature_selection import SelectFromModel
