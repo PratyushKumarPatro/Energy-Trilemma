@@ -60,7 +60,7 @@ imputed_df.dtypes
 target_categorical = []
 target_continuous = imputed_df.loc[:, 'm2_q69_elec_hrs']
 
-# Use len() to get the length of the series
+# Create Categories
 
 for i in range(len(target_continuous)):
     current_value = target_continuous.iloc[i]  # Retrieve the actual value at the current index
@@ -132,13 +132,12 @@ print(conf_matrix)
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
-# Define class labels
+
 class_names = ['Not available', 'Limited availability', 'Partially available','Mostly available', 'Fully available']
 
 plt.rcParams['font.family'] = 'Times New Roman'
 plt.figure(figsize=(10, 8), dpi=200)
 sns.set(font_scale=1.5)  # Set font scale for labels and annotations
-# Plot confusion matrix
 plt.figure(figsize=(7, 5))
 sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
 plt.xlabel('Predicted',fontsize=15)
